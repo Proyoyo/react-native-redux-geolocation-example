@@ -1,0 +1,27 @@
+{
+  "name": "ReverseGeoRedux",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "start": "react-native start",
+    "clean": "cd node_modules; find . -name .babelrc | grep -v packager | xargs rm",
+    "debugger-replace": "remotedev-debugger-replace --hostname localhost --port 5678",
+    "debugger-replace-with-slider": "remotedev-debugger-replace-with-slider --hostname localhost --port 5678",
+    "remotedev": "npm run debugger-replace && remotedev --hostname localhost --port 5678",
+    "remotedev-slider": "npm run debugger-replace-with-slider && remotedev --hostname localhost --port 5678"
+  },
+  "dependencies": {
+    "lodash": "^3.6.0",
+    "react-native": "^0.17.0",
+    "react-redux": "3.1.2",
+    "redux": "3.0.5",
+    "redux-logger": "*",
+    "redux-thunk": "^1.0.0",
+    "react-native-redux-router": "file:../Forks/react-native-redux-router",
+    "react-native-navbar": "file:../Forks/react-native-navbar"
+  },
+  "devDependencies": {
+    "remote-redux-devtools": "0.0.8",
+    "remote-redux-devtools-on-debugger": "^0.1.0"
+  }
+}
