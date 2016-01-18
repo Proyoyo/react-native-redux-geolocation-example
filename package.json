@@ -17,8 +17,8 @@
     "redux": "3.0.5",
     "redux-logger": "*",
     "redux-thunk": "^1.0.0",
-    "react-native-redux-router": "file:../Forks/react-native-redux-router",
-    "react-native-navbar": "file:../Forks/react-native-navbar"
+    "react-native-redux-router": "git://github.com/Proyoyo/react-native-redux-router#master",
+    "react-native-navbar": "git://github.com/Proyoyo/react-native-navbar#master"
   },
   "devDependencies": {
     "remote-redux-devtools": "0.0.8",
