@@ -114,7 +114,7 @@ describe('Fetch Action', () => {
                 response: parsedResponse
             }
         ]
-        const store = mockStore({}, expectedActions, done());
+        const store = mockStore({}, expectedActions, done);
         store.dispatch(actions.fetchLocation('46+Clarendon+Street'));
     })
 });

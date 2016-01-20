@@ -9,7 +9,7 @@
     "debugger-replace-with-slider": "remotedev-debugger-replace-with-slider --hostname localhost --port 5678",
     "remotedev": "npm run debugger-replace && remotedev --hostname localhost --port 5678",
     "remotedev-slider": "npm run debugger-replace-with-slider && remotedev --hostname localhost --port 5678",
-    "test": "mocha --compilers js:babel-core/register --recursive",
+    "test": "mocha --reporter spec --compilers js:babel-core/register --recursive",
     "test:watch": "npm test -- --watch"
   },
   "dependencies": {
