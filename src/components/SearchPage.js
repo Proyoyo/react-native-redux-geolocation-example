@@ -64,12 +64,15 @@ class SearchPage extends Component {
 
     constructor(props){
         super(props);
-        console.log(this.props);
         this.state = {
             locationData: new ListView.DataSource({
                 rowHasChanged: (row1, row2) => !_.isEqual(row1, row2)
             })
         };
+
+        this.onSearchTextChanged = this.onSearchTextChanged.bind(this);
+        this.onSearchPressed = this.onSearchPressed.bind(this);
+        this.renderLocations = this.renderLocations.bind(this);
     }
 
     componentDidMount(){
@@ -120,18 +123,18 @@ class SearchPage extends Component {
                 <TextInput
                     style = {styles.searchInput}
                     value = {this.props.searchField}
-                    onChange = {this.onSearchTextChanged.bind(this)}
+                    onChange = {this.onSearchTextChanged}
                     placeholder = 'Search address'/>
                 <TouchableHighlight style = {styles.button}
                     underlayColor = '#99d9f4'
-                    onPress = {this.onSearchPressed.bind(this)}>
+                    onPress = {this.onSearchPressed}>
                     <Text style = {styles.buttonText}>Go</Text>
                 </TouchableHighlight>
             </View>
             {spinner}
             <ListView
                 dataSource = {this.state.locationData.cloneWithRows(this.props.response)}
-                renderRow = {this.renderLocations.bind(this)}
+                renderRow = {this.renderLocations}
             />
 
 

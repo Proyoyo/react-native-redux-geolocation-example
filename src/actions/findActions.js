@@ -1,7 +1,6 @@
 import * as types from './actionTypes';
 
 module.exports.requestUpdate = function requestUpdate(address){
-    console.log('REQUESTING')
     return {
         type: types.REQUESTUPDATE,
         address
@@ -13,6 +12,7 @@ module.exports.receiveUpdate = function receiveUpdate(address, json){
     //console.log(json)
 
     var locationList = [];
+    var i;
     for(i = 0; i < json.results.length; i++){
         locationList.push(json.results[i])
 
@@ -33,7 +33,6 @@ module.exports.updateSearchInput = function updateSearchInput(input){
 }
 
 module.exports.fetchLocation = function fetchLocation(address){
-    console.log('FETCHING')
     return dispatch => {
         dispatch(exports.requestUpdate(address))
         return fetch(`https://maps.googleapis.com/maps/api/geocode/json?&encoding=json&address=${address}`)
