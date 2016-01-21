@@ -14,18 +14,18 @@
   },
   "dependencies": {
     "lodash": "^3.6.0",
+    "react": "^0.14.6",
     "react-native": "^0.17.0",
+    "react-native-navbar": "git://github.com/Proyoyo/react-native-navbar#master",
+    "react-native-redux-router": "git://github.com/Proyoyo/react-native-redux-router#master",
     "react-redux": "3.1.2",
     "redux": "3.0.5",
     "redux-logger": "*",
-    "redux-thunk": "^1.0.0",
-    "react-native-redux-router": "git://github.com/Proyoyo/react-native-redux-router#master",
-    "react-native-navbar": "git://github.com/Proyoyo/react-native-navbar#master"
+    "redux-thunk": "^1.0.0"
   },
   "devDependencies": {
     "babel-core": "^6.4.0",
-    "babel-preset-es2015": "^6.3.13",
-    "babel-preset-stage-2": "^6.3.13",
+    "babel-register": "^6.4.3",
     "es6-promise": "^3.0.2",
     "expect": "^1.13.4",
     "isomorphic-fetch": "^2.2.1",
