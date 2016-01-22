@@ -1,6 +1,6 @@
 import expect from 'expect';
-import reverseGeo from '../src/reducers/reverse';
-import * as types from '../src/actions/actionTypes';
+import reverseGeo from '../../src/reducers/reverse';
+import * as types from '../../src/actions/actionTypes';
 
 describe('Reducer Test', () => {
     it('should initialize state', () => {

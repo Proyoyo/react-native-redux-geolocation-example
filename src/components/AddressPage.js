@@ -12,7 +12,7 @@ var styles = React.StyleSheet.create({
     }
 });
 
-class AddressPage extends Component {
+export default class AddressPage extends Component {
     render(){
         console.log(this.props)
         return(
@@ -23,5 +23,3 @@ class AddressPage extends Component {
         );
     }
 }
-
-module.exports = AddressPage
