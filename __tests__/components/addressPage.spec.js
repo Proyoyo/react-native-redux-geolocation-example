@@ -21,11 +21,8 @@ describe('Address Page', function() {
             }
         }}
 
-    />);
+        />);
         let output = shallowRenderer.getRenderOutput();
-        console.log('EGWEAGWEGW')
-        console.log(output.props.children)
-
         expect(output.props.children.type).toBe(Text);
     });
 });
