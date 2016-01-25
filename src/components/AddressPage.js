@@ -13,12 +13,17 @@ var styles = React.StyleSheet.create({
 });
 
 export default class AddressPage extends Component {
+    constructor(props){
+        super(props)
+    }
     render(){
         console.log(this.props)
+        var latitude = this.props.location.geometry.location.lat;
+        var longitude = this.props.location.geometry.location.lng;
         return(
             <View style = {styles.container}>
-                <Text>lat: {this.props.location.geometry.location.lat} {'\n'}
-                    long: {this.props.location.geometry.location.lng}</Text>
+                <Text>lat: {latitude} {'\n'}
+                    long: {longitude}</Text>
             </View>
         );
     }

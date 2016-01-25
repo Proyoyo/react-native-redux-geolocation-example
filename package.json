@@ -10,7 +10,9 @@
     "remotedev": "npm run debugger-replace && remotedev --hostname localhost --port 5678",
     "remotedev-slider": "npm run debugger-replace-with-slider && remotedev --hostname localhost --port 5678",
     "test": "mocha --reporter spec --compilers js:babel-core/register --recursive",
-    "test:watch": "npm test -- --watch"
+    "test:watch": "npm test -- --watch",
+    "test-jest": "rm -rf ./node_modules/jest-cli/.haste_cache && jest",
+    "test-jest:watch": "npm run test-jest -- --watch"
   },
   "dependencies": {
     "lodash": "^3.6.0",
@@ -24,15 +26,29 @@
     "redux-thunk": "^1.0.0"
   },
   "devDependencies": {
-    "babel-core": "^6.4.0",
+    "babel-core": "^6.4.5",
     "babel-register": "^6.4.3",
     "es6-promise": "^3.0.2",
     "expect": "^1.13.4",
+    "indent": "0.0.1",
+    "inspect-react-element": "^1.0.1",
     "isomorphic-fetch": "^2.2.1",
+    "jest-cli": "0.8.2",
     "mocha": "^2.3.4",
     "nock": "^5.2.1",
+    "object-matches": "^1.0.0",
+    "react-shallow-renderer-helpers": "^1.2.0",
     "redux-mock-store": "0.0.6",
     "remote-redux-devtools": "0.0.8",
     "remote-redux-devtools-on-debugger": "^0.1.0"
+  },
+  "jest": {
+      "scriptPreprocessor": "jestSupport/scriptPreprocess.js",
+      "unmockedModulePathPatterns": [
+          "react"
+      ],
+      "testFileExtensions": [
+          "spec.js"
+      ]
   }
 }
