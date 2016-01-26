@@ -1,4 +1,4 @@
-
+jest.autoMockOff();
 jest.dontMock('../../src/components/AddressPage');
 
 var React = require('react-native');
@@ -7,8 +7,6 @@ var AddressPage = require('../../src/components/AddressPage').default;
 
 const shallowHelpers = require('react-shallow-renderer-helpers');
 const shallowRenderer = shallowHelpers.createRenderer();
-
-
 
 describe('Address Page', function() {
     it('should render text component', () => {

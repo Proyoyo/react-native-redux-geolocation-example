@@ -60,8 +60,6 @@ var styles = React.StyleSheet.create({
 
 class SearchPage extends Component {
 
-
-
     constructor(props){
         super(props);
         this.state = {
